@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soluções por Segmento — Aclaris</title>
+<meta name="description" content="Sistemas de tratamento de água por segmento: farmacêutico, hospitalar, cosmético, alimentício, químico e condominial. Osmose reversa, desmineralização, abrandamento e ultrafiltração.">
+<link rel="icon" href="assets/img/logo-aclaris.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .seg-block{ padding:56px 0; border-bottom:1px solid var(--line); }
+  .seg-block__head{ display:flex; align-items:baseline; gap:18px; margin-bottom:20px; }
+  .seg-block__num{ font-family:var(--font-mono); font-size:13px; color:var(--orange-dark); }
+  .seg-block h2{ font-family:var(--font-display); font-weight:700; font-size:clamp(24px,2.6vw,32px); color:var(--ink); letter-spacing:-0.01em; }
+  .seg-block__grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:48px; }
+  .seg-block p{ color:var(--steel); font-size:15px; margin-bottom:14px; }
+  .req-card{ background:var(--paper-2); border:1px solid var(--line); padding:22px; }
+  .req-card h5{ font-family:var(--font-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--orange-dark); margin-bottom:10px; }
+  .req-card ul{ display:flex; flex-direction:column; gap:8px; }
+  .req-card li{ font-size:13.5px; color:var(--graphite); padding-left:14px; position:relative; }
+  .req-card li::before{ content:"—"; position:absolute; left:0; color:var(--orange); }
+  @media (max-width:900px){ .seg-block__grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="container site-header__bar">
+    <a href="index.html" class="brand"><img src="assets/img/logo-aclaris.svg" alt="" class="brand__mark"><span>ACLARIS<span class="brand__sub">Tratamento de Água Industrial</span></span></a>
+    <nav class="nav-desktop" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Quem Somos</a>
+      <a href="solucoes.html" class="is-active">Soluções</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="diagnostico-360.html">Diagnóstico 360°</a>
+      <a href="blog.html">Blog</a>
+      <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="header-social">
+      <a href="https://www.linkedin.com/company/aclaris-oficial/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-btn--linkedin"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+      <a href="https://instagram.com/aclaris_oficial" target="_blank" rel="noopener" aria-label="Instagram" class="social-btn--instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+    </div>
+    <div class="header-cta"><a href="contato.html" class="btn btn-primary btn-sm">Solicitar orçamento</a></div>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+  </div>
+  <nav class="mobile-nav" aria-label="Navegação móvel">
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Quem Somos</a>
+    <a href="solucoes.html">Soluções</a>
+    <a href="produtos.html">Produtos</a>
+    <a href="diagnostico-360.html">Diagnóstico 360°</a>
+    <a href="blog.html">Blog</a>
+    <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+    <a href="contato.html">Contato</a>
+    <div class="header-social">
+      <a href="https://www.linkedin.com/company/aclaris-oficial/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-btn--linkedin"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+      <a href="https://instagram.com/aclaris_oficial" target="_blank" rel="noopener" aria-label="Instagram" class="social-btn--instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+    </div>
+    <div class="header-cta"><a href="contato.html" class="btn btn-primary btn-block">Solicitar orçamento</a></div>
+  </nav>
+  <div class="header-flow" aria-hidden="true"></div>
+</header>
+
+<section class="page-hero has-video">
+  <video class="page-hero-video" autoplay muted loop playsinline poster="assets/img/hero-solucoes-poster.jpg">
+    <source src="assets/video/hero-solucoes.mp4" type="video/mp4">
+  </video>
+  <div class="page-hero-video-overlay"></div>
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Início</a> / Soluções</p>
+    <h1>Seis segmentos, seis exigências de qualidade diferentes.</h1>
+    <p>Não existe "água tratada" genérica — existe a especificação que o seu produto, paciente ou processo exige. Veja como atendemos cada um.</p>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+
+    <div class="seg-block" id="farmaceutico">
+      <div class="seg-block__head"><span class="seg-block__num">01</span><h2>Farmacêutico</h2></div>
+      <div class="seg-block__grid">
+        <div>
+          <p>Água purificada (PW) e ultrapurificada (WFI) para produção e laboratórios. Sistemas dimensionados para atender protocolos de compliance farmacêutico, com qualificação de instalação (IQ) e documentação completa para auditoria.</p>
+          <p>Tecnologia aplicada: osmose reversa de duplo passo com zero descarte, seguida de polimento com resinas e ultrafiltração para garantir pureza microbiológica.</p>
+        </div>
+        <div class="req-card">
+          <h5>Exigências típicas</h5>
+          <ul>
+            <li>Conformidade com USP / RDC</li>
+            <li>Baixa condutividade e sílica</li>
+            <li>Rastreabilidade de processo</li>
+            <li>Documentação para compliance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="seg-block" id="hospitalar">
+      <div class="seg-block__head"><span class="seg-block__num">02</span><h2>Hospitalar</h2></div>
+      <div class="seg-block__grid">
+        <div>
+          <p>Água para sistemas de hemodiálise, CME e equipamentos de diagnóstico — onde cada detalhe impacta diretamente a vida do paciente. Mesmo pequenas impurezas, como cloro residual, metais pesados ou bactérias, podem causar reações graves: febre, infecções ou intoxicações.</p>
+          <p>Sistema completo: filtros de carvão ativado (remoção de cloro), abrandadores (controle de dureza), osmose reversa dupla (remoção de sais, metais e contaminantes) e polimento final com resinas e ultrafiltração.</p>
+        </div>
+        <div class="req-card">
+          <h5>Normas atendidas</h5>
+          <ul>
+            <li>RDC 11/2014 — Anvisa</li>
+            <li>ISO 23500 (padrão internacional)</li>
+            <li>Monitoramento contínuo de condutividade</li>
+            <li>Testes de cloro e rastreabilidade via QR Code</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="seg-block" id="cosmetico">
+      <div class="seg-block__head"><span class="seg-block__num">03</span><h2>Cosmético</h2></div>
+      <div class="seg-block__grid">
+        <div>
+          <p>Água desmineralizada de alta qualidade para formulações estáveis e processos produtivos. Atendemos empresas que abastecem desde grandes multinacionais até laboratórios de manipulação — a consistência da água impacta diretamente a estabilidade do produto final.</p>
+        </div>
+        <div class="req-card">
+          <h5>Exigências típicas</h5>
+          <ul>
+            <li>Alta pureza e baixa condutividade</li>
+            <li>Estabilidade de formulação</li>
+            <li>Fornecimento contínuo sem interrupção</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="seg-block" id="alimenticio">
+      <div class="seg-block__head"><span class="seg-block__num">04</span><h2>Alimentício</h2></div>
+      <div class="seg-block__grid">
+        <div>
+          <p>Tratamento de água para processos produtivos e indústria de bebidas, garantindo segurança na produção — de sólidos suspensos a bactérias e vírus, removidos por ultrafiltração com membranas de fibra oca.</p>
+        </div>
+        <div class="req-card">
+          <h5>Exigências típicas</h5>
+          <ul>
+            <li>Segurança microbiológica</li>
+            <li>Consistência de sabor e processo</li>
+            <li>Alta vazão contínua</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="seg-block" id="quimico">
+      <div class="seg-block__head"><span class="seg-block__num">05</span><h2>Químico</h2></div>
+      <div class="seg-block__grid">
+        <div>
+          <p>Água de processo com parâmetros controlados para reações industriais — incluindo aplicações críticas como o dielétrico usado em eletroerosão, onde a qualidade da resina de troca iônica impacta diretamente custo, eficiência e desempenho do processo.</p>
+        </div>
+        <div class="req-card">
+          <h5>Exigências típicas</h5>
+          <ul>
+            <li>Parâmetros de processo controlados</li>
+            <li>Resinas catiônicas, aniônicas e mistas</li>
+            <li>Regeneração com rastreabilidade individual</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="seg-block" id="condominial" style="border-bottom:none">
+      <div class="seg-block__head"><span class="seg-block__num">06</span><h2>Condominial</h2></div>
+      <div class="seg-block__grid">
+        <div>
+          <p>Sistemas ETA Plus para tratamento e reuso de águas pluviais, com qualidade garantida para consumo humano — reduzindo desperdício e reaproveitando água com eficiência em empresas e condomínios.</p>
+        </div>
+        <div class="req-card">
+          <h5>Exigências típicas</h5>
+          <ul>
+            <li>Qualidade para consumo humano</li>
+            <li>Reuso e sustentabilidade</li>
+            <li>Baixo custo operacional</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="on-ink bp-grid">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>As quatro tecnologias por trás de cada solução</h2>
+    </div>
+    <div class="tech-grid reveal">
+      <div class="tech-card"><div><h4>Osmose Reversa</h4></div><p>Duplo passo, zero descarte. Remove sais, metais e contaminantes para processos críticos.</p></div>
+      <div class="tech-card"><div><h4>Desmineralização</h4></div><p>Remoção de sais minerais por troca iônica, em versões compactas e industriais.</p></div>
+      <div class="tech-card"><div><h4>Abrandamento</h4></div><p>Eliminação da dureza da água, prevenindo incrustações em caldeiras e tubulações.</p></div>
+      <div class="tech-card"><div><h4>Ultrafiltração</h4></div><p>Remoção avançada de sólidos suspensos, bactérias e vírus por membranas de fibra oca.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-band-inner">
+    <h2>Não sabe qual solução se aplica ao seu processo?</h2>
+    <div style="display:flex; gap:14px; flex-wrap:wrap">
+      <a href="diagnostico-360.html" class="btn" style="background:var(--ink); color:var(--white)">Agendar Diagnóstico 360°</a>
+      <a href="contato.html" class="btn btn-ghost">Falar com um especialista</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><img src="assets/img/logo-aclaris.svg" alt="" class="brand__mark"><span>ACLARIS</span></a>
+        <p>Soluções completas em tratamento de água industrial. Engenharia, projetos e serviços há mais de 28 anos.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Site</h5>
+        <ul>
+          <li><a href="sobre.html">Quem Somos</a></li>
+          <li><a href="solucoes.html">Soluções por segmento</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="diagnostico-360.html">Diagnóstico 360°</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="https://www.stellaresinas.com.br" target="_blank" rel="noopener">Stella Resinas ↗</a></li>
+        <li><a href="login.html">Acesso da equipe</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contato</h5>
+        <ul>
+          <li>R. Afonso Desidério, 30 — Taboão da Serra/SP</li>
+          <li><a href="tel:+551147868000">(11) 4786-8000</a></li>
+          <li><a href="mailto:comercial@aclaris.com.br">comercial@aclaris.com.br</a></li>
+          <li><a href="https://instagram.com/aclaris_oficial" target="_blank" rel="noopener">@aclaris_oficial</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Aclaris Tratamento de Água. Todos os direitos reservados.</span>
+      <span>Taboão da Serra — SP</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5511947876402" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.32 4.94L2 22l5.25-1.37a9.9 9.9 0 0 0 4.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm0 18.2h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 1 1 6.98 3.85zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08s.9 2.42 1.02 2.58c.12.17 1.77 2.7 4.28 3.78.6.26 1.06.41 1.43.53.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

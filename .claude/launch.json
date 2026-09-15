@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "aclaris",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-File", "C:\\Claude Sites\\serve.ps1", "-Root", "C:\\Claude Sites\\aclaris-redesign", "-Port", "5511"],
+      "port": 5511
+    }
+  ]
+}
