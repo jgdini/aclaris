@@ -336,8 +336,8 @@ button{ font-family:inherit; }
   inset:0;
   z-index:1;
   background:
-    radial-gradient(ellipse 900px 500px at 78% 10%, rgba(232,84,30,0.20), transparent 60%),
-    linear-gradient(180deg, rgba(11,33,56,0.55) 0%, rgba(11,33,56,0.82) 55%, var(--ink) 100%);
+    radial-gradient(ellipse 900px 500px at 78% 10%, rgba(232,84,30,0.18), transparent 60%),
+    linear-gradient(180deg, rgba(11,33,56,0.72) 0%, rgba(11,33,56,0.90) 55%, var(--ink) 100%);
 }
 .hero > .container, .hero > .trust, .hero > .stats{
   position:relative;
