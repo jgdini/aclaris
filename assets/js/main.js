@@ -16,6 +16,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Mega menu (desktop): hover to open, click to toggle, close on outside click / Escape
+  const navItems = document.querySelectorAll('.nav-item');
+  if (navItems.length) {
+    let closeTimer = null;
+    const closeAll = (except) => {
+      navItems.forEach(item => {
+        if (item !== except) {
+          item.classList.remove('is-open');
+          item.querySelector('.nav-item__trigger').setAttribute('aria-expanded', 'false');
+        }
+      });
+    };
+    navItems.forEach(item => {
+      const trigger = item.querySelector('.nav-item__trigger');
+      trigger.addEventListener('click', () => {
+        const willOpen = !item.classList.contains('is-open');
+        closeAll();
+        item.classList.toggle('is-open', willOpen);
+        trigger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      });
+      item.addEventListener('mouseenter', () => {
+        if (window.matchMedia('(hover: hover)').matches) {
+          clearTimeout(closeTimer);
+          closeAll(item);
+          item.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+      item.addEventListener('mouseleave', () => {
+        if (window.matchMedia('(hover: hover)').matches) {
+          closeTimer = setTimeout(() => {
+            item.classList.remove('is-open');
+            trigger.setAttribute('aria-expanded', 'false');
+          }, 180);
+        }
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-item')) closeAll();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAll();
+    });
+  }
+
   // Scroll reveal — cascades child items (rows/cards) inside the revealed block
   const staggerSelector = '.segment-row, .tech-card, .process-step, .product-card, .value-card, .timeline-item, .social-card, .post-card, .segment-chip';
   const revealEls = document.querySelectorAll('.reveal');

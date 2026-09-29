@@ -3,19 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Produtos | Aclaris</title>
-<meta name="description" content="Linha completa de produtos para tratamento de água: resinas, meios filtrantes, membranas, elementos filtrantes, equipamentos e componentes.">
+<title>Como Trabalhamos | Aclaris</title>
+<meta name="description" content="Diagnóstico, engenharia, implantação e continuidade: como a Aclaris projeta, instala e mantém sistemas de tratamento de água industrial, do primeiro contato ao acompanhamento contínuo.">
 <link rel="icon" href="assets/img/logo-aclaris.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-<style>
-  .cat-nav{ display:flex; gap:0; flex-wrap:wrap; border-bottom:1px solid var(--line); margin-bottom:0; position:sticky; top:76px; background:var(--paper); z-index:10; }
-  .cat-nav a{ font-family:var(--font-mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase; padding:16px 18px; color:var(--steel); border-bottom:2px solid transparent; }
-  .cat-nav a:hover{ color:var(--orange-dark); }
-  .cat-title{ font-family:var(--font-display); font-weight:700; font-size:22px; color:var(--ink); margin:0 0 22px; scroll-margin-top:150px; }
-</style>
 </head>
 <body>
 <div class="scroll-progress" aria-hidden="true"></div>
@@ -29,7 +23,7 @@
     <nav class="nav-desktop" aria-label="Navegação principal">
       <a href="index.html">Início</a>
       <div class="nav-item">
-        <button type="button" class="nav-item__trigger" aria-expanded="false">Soluções<svg class="nav-item__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 1l4 4 4-4"/></svg></button>
+        <button type="button" class="nav-item__trigger is-active" aria-expanded="false">Soluções<svg class="nav-item__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 1l4 4 4-4"/></svg></button>
         <div class="mega-menu">
           <div class="mega-menu__col">
             <p class="mega-menu__col-title">Segmentos atendidos</p>
@@ -43,8 +37,8 @@
           <div class="mega-menu__col">
             <p class="mega-menu__col-title">Operação e continuidade</p>
             <a href="diagnostico-360.html" class="mega-menu__item"><span>Diagnóstico 360°</span><small>Avaliação técnica antes de qualquer proposta</small></a>
-            <a href="como-trabalhamos.html" class="mega-menu__item"><span>Como trabalhamos</span><small>Diagnóstico, engenharia, implantação e continuidade</small></a>
             <a href="como-trabalhamos.html#engenharia" class="mega-menu__item"><span>Projetos sob medida</span><small>Engenharia, FAT, SAT e qualificação de instalação</small></a>
+            <a href="como-trabalhamos.html#engenharia" class="mega-menu__item"><span>Locação de sistemas</span><small>Fornecimento e locação conforme a demanda</small></a>
             <a href="como-trabalhamos.html#continuidade" class="mega-menu__item"><span>Manutenção e suporte</span><small>Acompanhamento técnico contínuo</small></a>
             <div class="mega-menu__cta">
               <p>Precisa de uma solução personalizada?</p>
@@ -81,7 +75,7 @@
         </div>
       </div>
       <div class="nav-item">
-        <button type="button" class="nav-item__trigger is-active" aria-expanded="false">Produtos<svg class="nav-item__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 1l4 4 4-4"/></svg></button>
+        <button type="button" class="nav-item__trigger" aria-expanded="false">Produtos<svg class="nav-item__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 1l4 4 4-4"/></svg></button>
         <div class="mega-menu">
           <div class="mega-menu__col">
             <p class="mega-menu__col-title">Resinas</p>
@@ -140,7 +134,7 @@
       <a href="solucoes.html#quimico">Químico</a>
       <a href="solucoes.html#condominial">Condominial</a>
       <a href="diagnostico-360.html">Diagnóstico 360°</a>
-      <a href="como-trabalhamos.html">Como trabalhamos</a>
+      <a href="como-trabalhamos.html" class="is-active">Como trabalhamos</a>
     </details>
     <details class="mobile-nav__group">
       <summary>Tecnologias</summary>
@@ -174,152 +168,65 @@
   <div class="header-flow" aria-hidden="true"></div>
 </header>
 
-<section class="page-hero has-video">
-  <video class="page-hero-video" autoplay muted loop playsinline poster="assets/img/hero-produtos-poster.jpg">
-    <source src="assets/video/hero-produtos.mp4" type="video/mp4">
-  </video>
-  <div class="page-hero-video-overlay"></div>
+<section class="page-hero bp-grid">
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">Início</a> / Produtos</p>
-    <h1>Linha completa de produtos e insumos para tratamento de água.</h1>
-    <p>Fornecimento contínuo de equipamentos e reposição: resinas, meios filtrantes, membranas, elementos filtrantes, equipamentos e componentes.</p>
+    <p class="breadcrumb"><a href="index.html">Início</a> / Como trabalhamos</p>
+    <h1>O tratamento certo começa entendendo o seu processo.</h1>
+    <p>Antes de especificar qualquer equipamento, analisamos a água, a vazão, a infraestrutura e as exigências da sua operação para projetar uma solução sob medida.</p>
+    <div class="hero-cta" style="margin-top:30px">
+      <a href="contato.html" class="btn btn-primary">Falar com um especialista</a>
+    </div>
   </div>
 </section>
 
-<section class="section-tight" style="padding-top:0">
-  <div class="container" style="padding-left:0; padding-right:0">
-    <nav class="cat-nav container">
-      <a href="#resinas">Resinas</a>
-      <a href="#filtrantes">Meios Filtrantes</a>
-      <a href="#membranas">Membranas</a>
-      <a href="#elementos">Elementos Filtrantes</a>
-      <a href="#equipamentos">Equipamentos</a>
-      <a href="#componentes">Componentes</a>
-    </nav>
+<section>
+  <div class="container">
+    <div class="split reveal">
+      <div>
+        <div class="timeline">
+          <div class="timeline-item" id="diagnostico"><span class="year" style="font-size:20px">01</span><div><h4>Diagnóstico</h4><p>Entendimento da água, vazão e necessidade do processo.</p></div></div>
+          <div class="timeline-item" id="engenharia"><span class="year" style="font-size:20px">02</span><div><h4>Engenharia</h4><p>Dimensionamento da solução, materiais e instrumentação.</p></div></div>
+          <div class="timeline-item"><span class="year" style="font-size:20px">03</span><div><h4>Implantação</h4><p>Montagem, testes de fábrica (FAT), testes em campo (SAT) e qualificação de instalação (IQ).</p></div></div>
+          <div class="timeline-item" id="continuidade"><span class="year" style="font-size:20px">04</span><div><h4>Continuidade</h4><p>Manutenção, reposição e acompanhamento técnico contínuo.</p></div></div>
+        </div>
+      </div>
+      <img src="assets/img/equipe-campo.jpg" alt="Equipe técnica Aclaris em campo, avaliando instalação industrial com equipamentos de proteção">
+    </div>
   </div>
+</section>
 
-  <div class="container" style="padding-top:56px">
-
-    <div id="resinas" style="margin-bottom:56px">
-      <h3 class="cat-title">Resinas</h3>
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-cisne-aqua.jpg" alt="Saco de resina de troca iônica"></div>
-          <span class="code">CATIÔNICAS</span><h4>Resina catiônica</h4><p>Troca de cátions para abrandamento e desmineralização.</p>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-cisne-aqua.jpg" alt="Saco de resina de troca iônica"></div>
-          <span class="code">ANIÔNICAS</span><h4>Resina aniônica</h4><p>Remoção de ânions em sistemas de desmineralização.</p>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-cisne-aqua.jpg" alt="Saco de resina de troca iônica"></div>
-          <span class="code">MISTAS</span><h4>Leito misto</h4><p>Polimento final de alta pureza para água ultrapura.</p>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-cisne-aqua.jpg" alt="Saco de resina de troca iônica"></div>
-          <span class="code">ESPECIAIS</span><h4>Resinas especiais</h4><p>Remoção de nitrato, bário e aplicações específicas.</p>
-        </div>
+<section class="on-paper-2">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Aprofunde em cada etapa</h2>
+      <p>Três frentes que sustentam a operação do início ao acompanhamento contínuo.</p>
+    </div>
+    <div class="value-grid reveal">
+      <div class="value-card">
+        <h4>Diagnóstico 360°</h4>
+        <p>Avaliação técnica completa antes de qualquer proposta, com relatório e plano de ação em até 7 dias úteis.</p>
+        <div style="margin-top:16px"><a href="diagnostico-360.html" class="btn btn-ghost btn-sm">Conhecer o Diagnóstico 360° →</a></div>
+      </div>
+      <div class="value-card">
+        <h4>Projetos sob medida</h4>
+        <p>Engenharia personalizada, fornecimento de equipamentos e locação de sistemas conforme a demanda.</p>
+        <div style="margin-top:16px"><a href="index.html#projetos" class="btn btn-ghost btn-sm">Ver projetos e engenharia →</a></div>
+      </div>
+      <div class="value-card">
+        <h4>Manutenção e suporte</h4>
+        <p>Execução técnica, regeneração de resinas e manutenção preventiva pela Stella Resinas.</p>
+        <div style="margin-top:16px"><a href="sobre.html" class="btn btn-ghost btn-sm">Conhecer a estrutura integrada →</a></div>
       </div>
     </div>
-
-    <div id="filtrantes" style="margin-bottom:56px">
-      <h3 class="cat-title">Meios Filtrantes</h3>
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-tanque-media.jpg" alt="Tanque de meio filtrante"></div>
-          <span class="code">FILTRAÇÃO</span><h4>Areia quartzo</h4><p>Filtração mecânica de sólidos em suspensão.</p>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-tanque-media.jpg" alt="Tanque de meio filtrante"></div>
-          <span class="code">CLORO</span><h4>Carvão ativado</h4><p>Remoção de cloro livre e compostos orgânicos.</p>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-tanque-media.jpg" alt="Tanque de meio filtrante"></div>
-          <span class="code">FERRO/MN</span><h4>Antracito</h4><p>Filtração de partículas em suspensão.</p>
-        </div>
-      </div>
-    </div>
-
-    <div id="membranas" style="margin-bottom:56px">
-      <h3 class="cat-title">Membranas</h3>
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/osmose-reversa-industrial.jpg" alt="Membranas de osmose reversa industrial"></div>
-          <span class="code">RO</span><h4>Osmose reversa</h4><p>Remoção de sais, metais e contaminantes dissolvidos.</p>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-ultrafiltro.jpg" alt="Elemento de ultrafiltração"></div>
-          <span class="code">UF</span><h4>Ultrafiltração</h4><p>Fibra oca para remoção de sólidos, bactérias e vírus.</p>
-        </div>
-      </div>
-    </div>
-
-    <div id="elementos" style="margin-bottom:56px">
-      <h3 class="cat-title">Elementos Filtrantes</h3>
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-ultrafiltro.jpg" alt="Carcaça de filtro em aço inox"></div>
-          <span class="code">PP</span><h4>Polipropileno</h4><p>Elemento filtrante de 5µ para pré-filtração.</p>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-ultrafiltro.jpg" alt="Carcaça de filtro em aço inox"></div>
-          <span class="code">PLISSADO</span><h4>Plissados</h4><p>Maior área filtrante em menor espaço.</p>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-ultrafiltro.jpg" alt="Carcaça de filtro em aço inox"></div>
-          <span class="code">CARVÃO</span><h4>Cartuchos de carvão ativado</h4><p>Remoção de cloro e odor em linha.</p>
-        </div>
-      </div>
-    </div>
-
-    <div id="equipamentos" style="margin-bottom:56px">
-      <h3 class="cat-title">Equipamentos</h3>
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-abrandador-crop.jpg" alt="Bomba dosadora de sistema de tratamento"></div>
-          <span class="code">DOSAGEM</span><h4>Bombas dosadoras</h4><p>Dosagem precisa de produtos químicos de processo.</p>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-tanque-media.jpg" alt="Carcaça de sistema de tratamento"></div>
-          <span class="code">CARCAÇAS</span><h4>Carcaças</h4><p>Vasos de pressão para meios filtrantes e resinas.</p>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-abrandador-crop.jpg" alt="Reservatório de sistema de tratamento"></div>
-          <span class="code">RESERVATÓRIOS</span><h4>Reservatórios</h4><p>Armazenamento de água tratada e soluções.</p>
-        </div>
-      </div>
-    </div>
-
-    <div id="componentes">
-      <h3 class="cat-title">Componentes</h3>
-      <div class="product-grid">
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-tanque-media.jpg" alt="Válvula de sistema de tratamento"></div>
-          <span class="code">CONTROLE</span><h4>Válvulas</h4><p>Controle e automação de fluxo do sistema.</p>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/produto-abrandador-crop.jpg" alt="Conexões hidráulicas"></div>
-          <span class="code">HIDRÁULICA</span><h4>Conexões</h4><p>Interligação de linha para sistemas industriais.</p>
-        </div>
-        <div class="product-card">
-          <div class="product-card__img"><img src="assets/img/hero-sistema-skid.jpg" alt="Instrumentação de painel de controle"></div>
-          <span class="code">MEDIÇÃO</span><h4>Instrumentação</h4><p>Medição de condutividade, pH, vazão e pressão.</p>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin-top:20px; padding:24px; border:1px dashed var(--line); text-align:center; font-family:var(--font-mono); font-size:12.5px; color:var(--steel-light)">
-      Fornecimento completo de insumos e componentes de reposição para qualquer sistema de tratamento de água.
-    </div>
-
   </div>
 </section>
 
 <section class="cta-band">
   <div class="container cta-band-inner">
-    <h2>Precisa de um item específico ou de um projeto completo?</h2>
+    <h2>Quer conversar sobre o seu sistema de água?</h2>
     <div style="display:flex; gap:14px; flex-wrap:wrap">
-      <a href="contato.html" class="btn" style="background:var(--ink); color:var(--white)">Solicitar orçamento</a>
+      <a href="tel:+551147868000" class="btn" style="background:var(--ink); color:var(--white)">(11) 4786-8000</a>
+      <a href="https://wa.me/5511947876402" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp (11) 4787-6402</a>
     </div>
   </div>
 </section>
