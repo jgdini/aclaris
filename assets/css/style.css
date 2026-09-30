@@ -1,3 +1,6 @@
+/* Compensa o header fixo ao pular para uma âncora (#id), senão o header cobre o topo do alvo */
+[id]{ scroll-margin-top:100px; }
+
 /* ============================================================
    ACLARIS — Design tokens
    ============================================================ */
@@ -940,6 +943,31 @@ section{ padding:96px 0; }
   border:1px solid rgba(255,255,255,0.3);
   color:#fff;
 }
+.tech-card__specs{
+  list-style:none;
+  margin:16px 0 0;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,0.18);
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+.tech-card__specs li{
+  font-family:var(--font-mono);
+  font-size:11.5px;
+  line-height:1.4;
+  color:#E4E9EF;
+  padding-left:14px;
+  position:relative;
+}
+.tech-card__specs li::before{
+  content:"";
+  position:absolute;
+  left:0; top:6px;
+  width:5px; height:5px;
+  border-radius:50%;
+  background:var(--orange);
+}
 
 /* ---------- product grid ---------- */
 .product-grid{
@@ -1008,6 +1036,14 @@ section{ padding:96px 0; }
   color:var(--graphite);
 }
 .check-list svg{ flex:none; margin-top:3px; color:var(--orange); }
+.on-ink .split h3{ color:var(--white); }
+.on-ink .split p{ color:#AEB9C6; }
+.on-ink .split .check-list li{ color:#D7DEE6; }
+.on-ink .split img{ border-color:var(--line-dark); }
+
+/* destaque temporário ao chegar via link direto (#ancora) */
+.tech-block{ padding:10px; margin:-10px; border-radius:10px; transition:background-color .6s ease, box-shadow .6s ease; }
+.tech-block:target{ background-color:rgba(232,84,30,0.08); box-shadow:0 0 0 2px rgba(232,84,30,0.5); }
 
 /* ---------- stats bar ---------- */
 .stats{
