@@ -702,9 +702,9 @@ button{ font-family:inherit; }
 .trust-logos .chip{
   background:var(--white);
   border:1px solid var(--line);
-  height:54px;
-  padding:10px 22px;
-  border-radius:4px;
+  height:78px;
+  padding:14px 28px;
+  border-radius:5px;
   display:flex;
   align-items:center;
   flex:none;
