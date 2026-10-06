@@ -1642,7 +1642,7 @@ section{ padding:96px 0; }
 /* ============================================================
    SEO / acessibilidade (etapa 1)
    ============================================================ */
-h1,h2,h3{ text-wrap:balance; }
+h1,h2{ text-wrap:balance; }
 .skip-link{
   position:absolute; left:16px; top:-60px; z-index:1000;
   background:var(--ink); color:var(--white);

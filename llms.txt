@@ -30,7 +30,7 @@ Site: https://jgdini.github.io/aclaris/
 ## Perguntas frequentes
 
 **O que é o Diagnóstico 360° e quanto tempo leva?**
-É uma avaliação técnica do sistema de tratamento de água, do ponto de captação até a qualidade final. Inclui inspeção em campo, mapeamento de componentes, cálculo de consumo e performance, relatório técnico e plano de ação, entregues em até 7 dias úteis após a visita.
+É uma avaliação técnica do sistema de tratamento de água, do ponto de captação até a qualidade final. Inclui inspeção em campo, mapeamento de componentes, cálculo de consumo e desempenho, relatório técnico e plano de ação, entregues em até 7 dias úteis após a visita.
 
 **Que tecnologias de tratamento a Aclaris projeta?**
 Osmose reversa, desmineralização, abrandamento e ultrafiltração. A osmose reversa de duplo passo, com zero descarte, foi desenvolvida pela engenharia da Aclaris. A desmineralização usa resinas de troca iônica catiônicas, aniônicas e mistas.
