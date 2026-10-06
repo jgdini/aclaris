@@ -6,7 +6,7 @@ Site: https://jgdini.github.io/aclaris/
 
 ## Fatos principais
 
-- Marca Aclaris criada em 2017. A origem técnica do grupo é de 1998, com a Stella Resinas. Mais de 28 anos de atuação.
+- A origem técnica do grupo é de 1998, com a Stella Resinas. A marca Aclaris foi criada em 2017, com a incorporação do acervo tecnológico da PSI Soluções. Em 2023 houve a divisão estratégica: a Aclaris assumiu o comercial e os projetos e a Stella Resinas, a execução técnica e os serviços.
 - Sede: R. Afonso Desidério, 30, Taboão da Serra (SP), CEP 06795-040. Atendimento de segunda a sexta, das 07:30 às 17:30.
 - Contato: (11) 4786-8000, WhatsApp (11) 4787-6402, comercial@aclaris.com.br. Redes: Instagram @aclaris_oficial e LinkedIn aclaris-oficial.
 - Tecnologias: osmose reversa (duplo passo, zero descarte, desenvolvida pela engenharia própria), desmineralização por troca iônica, abrandamento e ultrafiltração (fibra oca, até 500 L/h no modelo compacto).
@@ -26,11 +26,19 @@ Site: https://jgdini.github.io/aclaris/
 - [Blog](https://jgdini.github.io/aclaris/blog.html): Conteúdo técnico sobre tratamento de água industrial: diagnóstico de sistemas, normas para água hospitalar, regeneração de resinas e ultrafiltração.
 - [Trabalhe Conosco](https://jgdini.github.io/aclaris/trabalhe-conosco.html): Vaga aberta de Auxiliar Comercial na Aclaris, em Taboão da Serra, SP. Veja atividades e requisitos, envie o currículo ou deixe seu cadastro para novas vagas.
 - [Contato](https://jgdini.github.io/aclaris/contato.html): Peça orçamento, agende o Diagnóstico 360° ou tire dúvidas técnicas. Taboão da Serra, SP. Atendimento de segunda a sexta, das 07:30 às 17:30.
+- [Osmose Reversa](https://jgdini.github.io/aclaris/osmose-reversa.html): Osmose reversa de duplo passo com zero descarte, desenvolvida pela engenharia da Aclaris. Água de baixa condutividade e sílica para farmácia e hemodiálise.
+- [Desmineralização](https://jgdini.github.io/aclaris/desmineralizacao.html): Desmineralização por troca iônica com resinas catiônicas, aniônicas e mistas, em versões compactas e industriais. Também em locação. Peça seu orçamento.
+- [Abrandamento](https://jgdini.github.io/aclaris/abrandamento.html): Abrandamento com resina de troca iônica para eliminar a dureza (cálcio e magnésio) e evitar incrustações em caldeiras e tubulações. Peça seu orçamento.
+- [Ultrafiltração](https://jgdini.github.io/aclaris/ultrafiltracao.html): Ultrafiltração compacta de até 500 L/h, com fibra oca e pré-filtro de 5 µ. Remove sólidos, bactérias e vírus. Veja a ficha técnica e peça orçamento.
+- [Água para hemodiálise](https://jgdini.github.io/aclaris/agua-para-hemodialise.html): Sistema completo de tratamento de água para hemodiálise, conforme RDC 11/2014 da Anvisa e ISO 23500: carvão ativado, abrandador, osmose reversa dupla e polimento.
+- [Locação de desmineralizador: quando faz mais sentido do que comprar](https://jgdini.github.io/aclaris/blog-locacao-de-desmineralizador-quando-faz-mais-sentido-do-que-comprar.html): Manutenção não programada, aumento temporário de produção ou projeto novo: veja quando alugar um desmineralizador faz mais sentido do que comprar um sistema.
+- [Diagnóstico 360° vai além da análise da água](https://jgdini.github.io/aclaris/blog-diagnostico-360-vai-alem-da-analise-da-agua.html): O Diagnóstico 360° avalia o sistema inteiro: operação, eficiência, consumo, riscos e oportunidades de melhoria, antes de qualquer decisão de investimento.
+- [Osmose reversa industrial: o treinamento que ensina a operar na prática](https://jgdini.github.io/aclaris/blog-osmose-reversa-industrial-o-treinamento-que-ensina-a-operar-na-pratica.html): Operação incorreta de um sistema de osmose reversa impacta custo, desempenho e confiabilidade. Veja o treinamento que ensina a operar na prática.
 
 ## Perguntas frequentes
 
 **O que é o Diagnóstico 360° e quanto tempo leva?**
-É uma avaliação técnica do sistema de tratamento de água, do ponto de captação até a qualidade final. Inclui inspeção em campo, mapeamento de componentes, cálculo de consumo e desempenho, relatório técnico e plano de ação, entregues em até 7 dias úteis após a visita.
+É uma avaliação técnica do sistema de tratamento de água, do ponto de captação até a qualidade final. Inclui inspeção em campo, mapeamento de componentes, cálculo de consumo e performance, relatório técnico e plano de ação, entregues em até 7 dias úteis após a visita.
 
 **Que tecnologias de tratamento a Aclaris projeta?**
 Osmose reversa, desmineralização, abrandamento e ultrafiltração. A osmose reversa de duplo passo, com zero descarte, foi desenvolvida pela engenharia da Aclaris. A desmineralização usa resinas de troca iônica catiônicas, aniônicas e mistas.
