@@ -137,25 +137,66 @@ document.addEventListener('DOMContentLoaded', () => {
     onScroll();
   }
 
-  // Pausa dos vídeos de fundo: respeita reduced-motion e oferece botão (WCAG 2.2.2)
-  document.querySelectorAll('video[autoplay]').forEach(v => {
-    if (reduceMotion) { v.pause(); v.removeAttribute('autoplay'); }
+  // Mapa do Google só depois do clique (sem requisições a terceiros no carregamento)
+  document.querySelectorAll('.map-facade').forEach(box => {
+    const btn = box.querySelector('[data-map-load]');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.title = box.dataset.mapTitle;
+      f.src = box.dataset.mapSrc;
+      f.loading = 'lazy';
+      f.referrerPolicy = 'no-referrer-when-downgrade';
+      box.innerHTML = '';
+      box.classList.add('is-loaded');
+      box.appendChild(f);
+    });
+  });
+
+  // Vídeos de fundo: carregam sob demanda, respeitam reduced-motion e economia de dados,
+  // e têm botão de pausa (WCAG 2.2.2). Em tela pequena ficam só no poster até o clique.
+  const lazyVideos = document.querySelectorAll('video[data-lazy-video]');
+  const holdBack = reduceMotion || (navigator.connection && navigator.connection.saveData) || window.matchMedia('(max-width: 768px)').matches;
+  const ICON_PAUSE = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+  const ICON_PLAY = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z"/></svg>';
+  const startVideo = (v) => {
+    if (v.dataset.started) return;
+    v.dataset.started = '1';
+    v.querySelectorAll('source[data-src]').forEach(s => { s.src = s.dataset.src; });
+    v.load();
+    v.play().catch(() => {});
+  };
+  lazyVideos.forEach(v => {
     const host = v.parentElement;
-    if (!host || host.querySelector('.video-toggle')) return;
+    if (!host) return;
+    v.addEventListener('lazyvideo:start', () => startVideo(v));
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'video-toggle';
-    const ICON_PAUSE = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
-    const ICON_PLAY = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z"/></svg>';
     const sync = () => {
-      const paused = v.paused;
-      btn.innerHTML = paused ? ICON_PLAY : ICON_PAUSE;
-      btn.setAttribute('aria-label', paused ? 'Reproduzir vídeo' : 'Pausar vídeo');
+      btn.innerHTML = v.paused ? ICON_PLAY : ICON_PAUSE;
+      btn.setAttribute('aria-label', v.paused ? 'Reproduzir vídeo' : 'Pausar vídeo');
     };
-    btn.addEventListener('click', () => { if (v.paused) v.play().catch(() => {}); else v.pause(); sync(); });
-    v.addEventListener('play', sync); v.addEventListener('pause', sync);
+    btn.addEventListener('click', () => {
+      if (!v.dataset.started) { startVideo(v); return; }
+      if (v.paused) v.play().catch(() => {}); else v.pause();
+    });
+    v.addEventListener('play', sync);
+    v.addEventListener('pause', sync);
     host.appendChild(btn);
     sync();
+    if (holdBack) return;
+    if (v.hasAttribute('data-hero')) {
+      const go = () => { const run = () => startVideo(v); if (window.requestIdleCallback) window.requestIdleCallback(run, { timeout: 1500 }); else setTimeout(run, 200); };
+      if (document.readyState === 'complete') go(); else window.addEventListener('load', go, { once: true });
+    } else if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        if (entries.some(e => e.isIntersecting)) { startVideo(v); io.disconnect(); }
+      }, { rootMargin: '300px 0px' });
+      io.observe(v);
+    } else {
+      startVideo(v);
+    }
   });
 
   // Segment photo cards — spotlight auto-cycles through each one
