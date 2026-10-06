@@ -137,11 +137,26 @@ document.addEventListener('DOMContentLoaded', () => {
     onScroll();
   }
 
-  // Respect reduced-motion: freeze hero background videos on their poster frame
-  const heroVideos = document.querySelectorAll('.hero-video, .page-hero-video');
-  if (reduceMotion) {
-    heroVideos.forEach(v => { v.pause(); v.removeAttribute('autoplay'); });
-  }
+  // Pausa dos vídeos de fundo: respeita reduced-motion e oferece botão (WCAG 2.2.2)
+  document.querySelectorAll('video[autoplay]').forEach(v => {
+    if (reduceMotion) { v.pause(); v.removeAttribute('autoplay'); }
+    const host = v.parentElement;
+    if (!host || host.querySelector('.video-toggle')) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'video-toggle';
+    const ICON_PAUSE = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+    const ICON_PLAY = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z"/></svg>';
+    const sync = () => {
+      const paused = v.paused;
+      btn.innerHTML = paused ? ICON_PLAY : ICON_PAUSE;
+      btn.setAttribute('aria-label', paused ? 'Reproduzir vídeo' : 'Pausar vídeo');
+    };
+    btn.addEventListener('click', () => { if (v.paused) v.play().catch(() => {}); else v.pause(); sync(); });
+    v.addEventListener('play', sync); v.addEventListener('pause', sync);
+    host.appendChild(btn);
+    sync();
+  });
 
   // Segment photo cards — spotlight auto-cycles through each one
   const segChips = document.querySelectorAll('.segment-chip');

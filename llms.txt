@@ -1,0 +1,48 @@
+# Aclaris
+
+> Empresa de Taboão da Serra (SP) que projeta, fornece e mantém sistemas de tratamento de água industrial: osmose reversa, desmineralização, abrandamento e ultrafiltração. Parte de uma estrutura integrada com a Stella Resinas, que executa os serviços.
+
+Site: https://jgdini.github.io/aclaris/
+
+## Fatos principais
+
+- Marca Aclaris criada em 2017. A origem técnica do grupo é de 1998, com a Stella Resinas. Mais de 28 anos de atuação.
+- Sede: R. Afonso Desidério, 30, Taboão da Serra (SP), CEP 06795-040. Atendimento de segunda a sexta, das 07:30 às 17:30.
+- Contato: (11) 4786-8000, WhatsApp (11) 4787-6402, comercial@aclaris.com.br. Redes: Instagram @aclaris_oficial e LinkedIn aclaris-oficial.
+- Tecnologias: osmose reversa (duplo passo, zero descarte, desenvolvida pela engenharia própria), desmineralização por troca iônica, abrandamento e ultrafiltração (fibra oca, até 500 L/h no modelo compacto).
+- Segmentos: farmacêutico (PW/WFI), hospitalar (hemodiálise, RDC 11/2014, ISO 23500), cosmético, alimentício, químico e condominial (ETA Plus, reuso de águas pluviais).
+- Diagnóstico 360°: relatório técnico e plano de ação em até 7 dias úteis. O valor varia com o porte do sistema.
+- Entrega com FAT (testes de fábrica), SAT (testes em campo) e IQ (qualificação de instalação). Atende às normas da ANVISA e do MAPA.
+- Empresa irmã: Stella Resinas (regeneração de resinas de troca iônica), https://www.stellaresinas.com.br/.
+
+## Páginas
+
+- [Início](https://jgdini.github.io/aclaris/): Projeto, fornecimento e manutenção de osmose reversa, desmineralização, abrandamento e ultrafiltração para indústrias, hospitais e condomínios em todo o Brasil.
+- [Quem Somos](https://jgdini.github.io/aclaris/sobre.html): Origem técnica em 1998 e marca Aclaris desde 2017. Comercial e projetos na Aclaris, execução e serviços na Stella Resinas, em Taboão da Serra, SP.
+- [Soluções](https://jgdini.github.io/aclaris/solucoes.html): Água purificada e ultrapurificada para farmácia, hemodiálise (RDC 11/2014), cosméticos, alimentos, química e condomínios. Veja a solução do seu segmento.
+- [Produtos](https://jgdini.github.io/aclaris/produtos.html): Resinas de troca iônica, areia, carvão ativado, antracito, membranas, elementos filtrantes, carcaças, bombas dosadoras e componentes para sistemas de água.
+- [Diagnóstico 360°](https://jgdini.github.io/aclaris/diagnostico-360.html): Avaliação técnica do sistema de água, do ponto de captação à qualidade final. Relatório técnico e plano de ação em até 7 dias úteis. Agende a visita.
+- [Como Trabalhamos](https://jgdini.github.io/aclaris/como-trabalhamos.html): Diagnóstico, engenharia, implantação e continuidade: veja como a Aclaris projeta, instala e mantém sistemas de água industrial, do contato ao pós-venda.
+- [Blog](https://jgdini.github.io/aclaris/blog.html): Conteúdo técnico sobre tratamento de água industrial: diagnóstico de sistemas, normas para água hospitalar, regeneração de resinas e ultrafiltração.
+- [Trabalhe Conosco](https://jgdini.github.io/aclaris/trabalhe-conosco.html): Vaga aberta de Auxiliar Comercial na Aclaris, em Taboão da Serra, SP. Veja atividades e requisitos, envie o currículo ou deixe seu cadastro para novas vagas.
+- [Contato](https://jgdini.github.io/aclaris/contato.html): Peça orçamento, agende o Diagnóstico 360° ou tire dúvidas técnicas. Taboão da Serra, SP. Atendimento de segunda a sexta, das 07:30 às 17:30.
+
+## Perguntas frequentes
+
+**O que é o Diagnóstico 360° e quanto tempo leva?**
+É uma avaliação técnica do sistema de tratamento de água, do ponto de captação até a qualidade final. Inclui inspeção em campo, mapeamento de componentes, cálculo de consumo e performance, relatório técnico e plano de ação, entregues em até 7 dias úteis após a visita.
+
+**Que tecnologias de tratamento a Aclaris projeta?**
+Osmose reversa, desmineralização, abrandamento e ultrafiltração. A osmose reversa de duplo passo, com zero descarte, foi desenvolvida pela engenharia da Aclaris. A desmineralização usa resinas de troca iônica catiônicas, aniônicas e mistas.
+
+**A Aclaris atende água para hemodiálise e para a indústria farmacêutica?**
+Sim. A osmose reversa de duplo passo é usada em água para hemodiálise (RDC 11/2014 e ISO 23500) e gera água purificada (PW) e ultrapurificada (WFI) para o segmento farmacêutico, conforme as normas da ANVISA e do MAPA.
+
+**Quais testes acompanham a entrega de um sistema?**
+Do projeto ao comissionamento, a Aclaris faz testes de fábrica (FAT), testes em campo (SAT) e qualificação de instalação (IQ).
+
+**Qual é a relação entre a Aclaris e a Stella Resinas?**
+As duas formam uma estrutura integrada. A Aclaris cuida do comercial e dos projetos. A Stella Resinas executa os serviços, como a regeneração de resinas. A origem técnica do grupo é de 1998 e a marca Aclaris foi criada em 2017.
+
+**Onde fica a Aclaris e qual é o horário de atendimento?**
+A sede fica na R. Afonso Desidério, 30, em Taboão da Serra (SP), CEP 06795-040. O atendimento é de segunda a sexta, das 07:30 às 17:30, pelo telefone (11) 4786-8000 ou pelo e-mail comercial@aclaris.com.br.
