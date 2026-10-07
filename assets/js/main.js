@@ -61,66 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Scroll reveal — cascades child items (rows/cards) inside the revealed block
-  const staggerSelector = '.segment-row, .tech-card, .process-step, .product-card, .value-card, .timeline-item, .social-card, .post-card, .segment-chip';
-  const revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && revealEls.length) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const items = entry.target.querySelectorAll(staggerSelector);
-          items.forEach((item, i) => {
-            item.style.transitionDelay = reduceMotion ? '0ms' : `${Math.min(i * 65, 520)}ms`;
-          });
-          entry.target.classList.add('is-visible');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    revealEls.forEach(el => io.observe(el));
-  } else {
-    revealEls.forEach(el => el.classList.add('is-visible'));
-  }
-
-  // Count-up numbers (stats, timeline years, hero metrics)
-  const counters = document.querySelectorAll('.count');
-  if (counters.length) {
-    const animateCount = (el) => {
-      const target = parseInt(el.getAttribute('data-target'), 10) || 0;
-      if (reduceMotion) { el.textContent = target; return; }
-      const duration = 1300;
-      const start = performance.now();
-      const tick = (now) => {
-        const progress = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        el.textContent = Math.floor(eased * target);
-        if (progress < 1) requestAnimationFrame(tick);
-        else el.textContent = target;
-      };
-      requestAnimationFrame(tick);
-    };
-    if ('IntersectionObserver' in window) {
-      const countIO = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animateCount(entry.target);
-            countIO.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.6 });
-      counters.forEach(el => countIO.observe(el));
-    } else {
-      counters.forEach(animateCount);
-    }
-  }
-
   // Scroll progress bar
   const progressBar = document.querySelector('.scroll-progress');
   if (progressBar) {
     const updateProgress = () => {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
-      progressBar.style.width = pct + '%';
+      progressBar.style.transform = 'scaleX(' + (pct / 100) + ')';
     };
     window.addEventListener('scroll', updateProgress, { passive: true });
     window.addEventListener('resize', updateProgress);
@@ -203,23 +150,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const segChips = document.querySelectorAll('.segment-chip');
   if (segChips.length && !reduceMotion) {
     let segIdx = 0;
+    let segVisible = true;
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver((es) => { segVisible = es[0].isIntersecting; }).observe(segChips[0].closest('.segment-strip') || segChips[0]);
+    }
     setInterval(() => {
+      if (!segVisible || document.hidden) return;
       segChips.forEach(c => c.classList.remove('is-active'));
       segChips[segIdx].classList.add('is-active');
       segIdx = (segIdx + 1) % segChips.length;
     }, 2200);
-  }
-
-  // Subtle parallax drift on the hero's blueprint grid
-  const heroGrid = document.querySelector('.hero.bp-grid');
-  if (heroGrid && !reduceMotion) {
-    const onHeroScroll = () => {
-      const y = window.scrollY;
-      if (y < window.innerHeight * 1.2) {
-        heroGrid.style.backgroundPosition = `${y * 0.12}px ${y * 0.12}px`;
-      }
-    };
-    window.addEventListener('scroll', onHeroScroll, { passive: true });
   }
 
   // Instrument panel readout — live-feeling data rotation
@@ -233,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (panelRows.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     let tick = 0;
     setInterval(() => {
+      if (document.hidden) return;
       tick = (tick + 1) % 5;
       panelRows.forEach(row => {
         const key = row.getAttribute('data-readout');

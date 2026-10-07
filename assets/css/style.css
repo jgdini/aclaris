@@ -1571,27 +1571,23 @@ section{ padding:96px 0; }
 .contact-info-row .h5{ font-family:var(--font-mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--steel); margin-bottom:6px; }
 .contact-info-row p, .contact-info-row a{ font-size:14.5px; color:var(--ink); }
 
-/* ---------- reveal on scroll ---------- */
-.reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
-.reveal.is-visible{ opacity:1; transform:none; }
-
-/* cascading child reveal — rows/cards fade in one after another */
-.segment-row, .tech-card, .process-step, .product-card, .value-card, .timeline-item, .social-card, .post-card, .segment-chip{
+/* ---------- reveal on scroll ----------
+   Só escondemos o conteúdo quando o motion.js está ativo (classe js-motion no <html>).
+   Sem JavaScript tudo aparece normalmente. */
+html.js-motion .reveal{ opacity:0; transform:translateY(18px); }
+html.js-motion .reveal.has-stagger,
+html.js-motion .reveal.is-revealed{ opacity:1; transform:none; }
+html.js-motion .reveal:not(.is-revealed) .segment-row,
+html.js-motion .reveal:not(.is-revealed) .tech-card,
+html.js-motion .reveal:not(.is-revealed) .process-step,
+html.js-motion .reveal:not(.is-revealed) .product-card,
+html.js-motion .reveal:not(.is-revealed) .value-card,
+html.js-motion .reveal:not(.is-revealed) .timeline-item,
+html.js-motion .reveal:not(.is-revealed) .social-card,
+html.js-motion .reveal:not(.is-revealed) .post-card,
+html.js-motion .reveal:not(.is-revealed) .segment-chip{
   opacity:0;
   transform:translateY(16px);
-  transition:opacity .5s ease, transform .5s ease;
-}
-.reveal.is-visible .segment-row,
-.reveal.is-visible .tech-card,
-.reveal.is-visible .process-step,
-.reveal.is-visible .product-card,
-.reveal.is-visible .value-card,
-.reveal.is-visible .timeline-item,
-.reveal.is-visible .social-card,
-.reveal.is-visible .post-card,
-.reveal.is-visible .segment-chip{
-  opacity:1;
-  transform:none;
 }
 
 /* ---------- scroll progress bar ---------- */
@@ -1599,10 +1595,11 @@ section{ padding:96px 0; }
   position:fixed;
   top:0; left:0;
   height:2.5px;
-  width:0%;
+  width:100%;
   background:var(--orange);
   z-index:200;
-  transition:width .08s linear;
+  transform-origin:0 50%;
+  transform:scaleX(0);
 }
 
 /* ============================================================
@@ -1812,4 +1809,49 @@ p, li, h1, h2, h3{ overflow-wrap:break-word; }
 .nav-desktop a, .nav-item__trigger{ padding:9px 8px; }
 @media (min-width: 1300px) and (max-width: 1639px){
   .site-header__bar .header-social{ display:none; }
+}
+
+
+/* ============================================================
+   MOTION (assets/js/motion.js)
+   ============================================================ */
+/* título e extras do hero: o título só fica oculto enquanto o SplitText prepara as linhas */
+html.js-motion :is(.hero--photo, .page-hero) h1{ visibility:hidden; }
+html.js-motion .hero--photo .hero-cta:not(.is-in),
+html.js-motion .hero--photo .hero-meta:not(.is-in),
+html.js-motion .page-hero .hero-cta:not(.is-in){ opacity:0; transform:translateY(14px); }
+
+/* imagens com revelação e parallax */
+.img-frame{ overflow:hidden; border:1px solid var(--line); }
+.on-ink .img-frame{ border-color:var(--line-dark); }
+.split .img-frame img{ border:0; display:block; }
+
+/* etapas fixas do Diagnóstico 360° */
+.process-progress{ height:2px; background:var(--line); margin-top:28px; overflow:hidden; }
+.process-progress span{ display:block; height:100%; background:var(--orange); transform-origin:0 50%; transform:scaleX(0); }
+
+/* botões magnéticos: o deslocamento é do JS, então a transição de transform sai */
+.btn.is-magnetic{ transition:background .15s ease, border-color .15s ease, color .15s ease; }
+
+/* esteira de logos para quando sai da tela */
+.trust-logos.is-offscreen .trust-logos__track{ animation-play-state:paused; }
+
+/* Lenis */
+html.lenis, html.lenis body{ height:auto; }
+.lenis.lenis-smooth{ scroll-behavior:auto !important; }
+.lenis.lenis-stopped{ overflow:clip; }
+.lenis.lenis-smooth iframe{ pointer-events:none; }
+
+/* transição entre páginas (navegadores com View Transitions; os outros navegam normalmente) */
+@view-transition{ navigation:auto; }
+.site-header{ view-transition-name:site-header; }
+::view-transition-old(root), ::view-transition-new(root){ animation-duration:.28s; }
+@media (prefers-reduced-motion: reduce){
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*){ animation:none !important; }
+}
+
+/* seção fixa do Diagnóstico: ocupa a altura da tela enquanto está fixa (só com motion ativo no desktop) */
+@media (min-width: 1025px) and (prefers-reduced-motion: no-preference){
+  html.js-motion [data-pin-steps]{ min-height:calc(100vh - 90px); display:flex; align-items:center; }
+  html.js-motion [data-pin-steps] > .container{ width:100%; }
 }

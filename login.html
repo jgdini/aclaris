@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js-motion');setTimeout(function(){var d=document.documentElement;if(!d.hasAttribute('data-motion-ready'))d.classList.remove('js-motion')},2500)</script>
 <!-- seo:start -->
 <title>Acesso da Equipe | Aclaris</title>
 <meta name="robots" content="noindex, nofollow">
@@ -254,6 +255,7 @@
   </div>
 </footer>
 
+<script>/* motion: carrega GSAP, Lenis e motion.js só depois da primeira pintura */(function(){var s=['gsap.min.js','ScrollTrigger.min.js','SplitText.min.js','lenis.min.js'].map(function(f){return 'assets/vendor/'+f}).concat('assets/js/motion.js');function go(){s.forEach(function(u){var e=document.createElement('script');e.src=u;e.async=false;document.body.appendChild(e)})}function after(){requestAnimationFrame(function(){requestAnimationFrame(function(){setTimeout(go,350)})})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',after);else after()})()</script>
 <script src="assets/js/main.js"></script>
 <script>
   document.querySelectorAll('.login-tabs button').forEach(btn => {
